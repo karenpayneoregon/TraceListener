@@ -23,6 +23,11 @@ namespace LogLibrary
             _textWriterTraceListener = new TextWriterTraceListener("applicationLog.txt", "PayneListener");
             Trace.Listeners.Add(_textWriterTraceListener);
         }
+        /// <summary>
+        /// Create new instance of trace listener
+        /// </summary>
+        /// <param name="fileName">From startup project app.config file to write too</param>
+        /// <param name="listenerName">From startup project app.config unique name of listener</param>
         public void CreateLog(string fileName, string listenerName)
         {
             _textWriterTraceListener = new TextWriterTraceListener(fileName, listenerName);
@@ -50,12 +55,24 @@ namespace LogLibrary
             return _textWriterTraceListener.Name;
         }
 
+        public void Flush()
+        {
+            if (_textWriterTraceListener == null) return;
+
+            _textWriterTraceListener.Flush();
+
+        }
+
         /// <summary>
         /// Write trace information to disk
         /// </summary>
         public void Close()
         {
+            if (_textWriterTraceListener == null) return;
+
             _textWriterTraceListener.Flush();
+            _textWriterTraceListener.Close();
+
         }
         public  void Exception(string message, [CallerMemberName] string callerName = null) => WriteEntry(message, "error", callerName);
         public  void Exception(Exception ex, [CallerMemberName] string callerName = null) => WriteEntry(ex.Message, "error", callerName);
@@ -65,8 +82,10 @@ namespace LogLibrary
         public bool WriteToTraceFile { get; set; }
         private void WriteEntry(string message, string type, string callerName)
         {
+            if (_textWriterTraceListener == null) return;
             if (!WriteToTraceFile) return;
 
+            _textWriterTraceListener.Flush();
             _textWriterTraceListener.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss},{type},{callerName},{message}");
         }
     }
