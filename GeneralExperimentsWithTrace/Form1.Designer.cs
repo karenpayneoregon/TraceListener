@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GetListenerPropertiesButton = new System.Windows.Forms.Button();
+            this.CastingButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GetListenerPropertiesButton
@@ -41,14 +42,26 @@
             this.GetListenerPropertiesButton.UseVisualStyleBackColor = true;
             this.GetListenerPropertiesButton.Click += new System.EventHandler(this.GetListenerPropertiesButton_Click);
             // 
+            // CastingButton
+            // 
+            this.CastingButton.Location = new System.Drawing.Point(25, 43);
+            this.CastingButton.Name = "CastingButton";
+            this.CastingButton.Size = new System.Drawing.Size(330, 23);
+            this.CastingButton.TabIndex = 1;
+            this.CastingButton.Text = "Casting";
+            this.CastingButton.UseVisualStyleBackColor = true;
+            this.CastingButton.Click += new System.EventHandler(this.CastingButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(409, 175);
+            this.Controls.Add(this.CastingButton);
             this.Controls.Add(this.GetListenerPropertiesButton);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Logging";
             this.ResumeLayout(false);
 
         }
@@ -56,6 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Button GetListenerPropertiesButton;
+        private System.Windows.Forms.Button CastingButton;
     }
 }
 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogLibrary", "LogLibrary\LogLibrary.csproj", "{BF5E8BC4-164D-41C2-81CB-34093E27F751}"
 EndProject
@@ -13,6 +13,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOperations", "FileOperations\FileOperations.csproj", "{7F71EEAC-7545-4A65-86E8-863D8C2251EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classic framework", "Classic framework", "{170EDBD6-4179-4707-9757-CDA734B76875}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core framework", "Core framework", "{B5817A55-4A5A-4B6D-9ED9-2B01E3D3EB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{59CD5073-FAFC-406D-B1B7-9775CF84C283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogForms1", "NoLogForms1\NLogForms1.csproj", "{6D867689-BAFF-48A7-9ECE-EF3632233901}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +40,24 @@ Global
 		{7F71EEAC-7545-4A65-86E8-863D8C2251EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F71EEAC-7545-4A65-86E8-863D8C2251EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F71EEAC-7545-4A65-86E8-863D8C2251EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59CD5073-FAFC-406D-B1B7-9775CF84C283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CD5073-FAFC-406D-B1B7-9775CF84C283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CD5073-FAFC-406D-B1B7-9775CF84C283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CD5073-FAFC-406D-B1B7-9775CF84C283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D867689-BAFF-48A7-9ECE-EF3632233901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D867689-BAFF-48A7-9ECE-EF3632233901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D867689-BAFF-48A7-9ECE-EF3632233901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D867689-BAFF-48A7-9ECE-EF3632233901}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF5E8BC4-164D-41C2-81CB-34093E27F751} = {170EDBD6-4179-4707-9757-CDA734B76875}
+		{0410D530-6BBF-4BE9-847D-040EBC8AB497} = {170EDBD6-4179-4707-9757-CDA734B76875}
+		{7F71EEAC-7545-4A65-86E8-863D8C2251EC} = {170EDBD6-4179-4707-9757-CDA734B76875}
+		{59CD5073-FAFC-406D-B1B7-9775CF84C283} = {B5817A55-4A5A-4B6D-9ED9-2B01E3D3EB15}
+		{6D867689-BAFF-48A7-9ECE-EF3632233901} = {B5817A55-4A5A-4B6D-9ED9-2B01E3D3EB15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7FCB2B2-41B4-4D1D-8D30-F85FE9E6DAB3}

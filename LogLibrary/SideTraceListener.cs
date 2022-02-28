@@ -85,8 +85,8 @@ namespace LogLibrary
             if (_textWriterTraceListener == null) return;
             if (!WriteToTraceFile) return;
 
-            _textWriterTraceListener.Flush();
             _textWriterTraceListener.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss},{type},{callerName},{message}");
+            _textWriterTraceListener.Flush();
         }
     }
 }

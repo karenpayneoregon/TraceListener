@@ -30,5 +30,19 @@ namespace GeneralExperimentsWithTrace
             fileOperations.GetLines();
 
         }
+
+        private void CastingButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SideTraceListener.Instance.Info("Before bad cast");
+                var CheckBox = (CheckBox)sender;
+            }
+            catch (Exception exception)
+            {
+                SideTraceListener.Instance.Exception(exception);
+            }
+
+        }
     }
 }
