@@ -16,7 +16,7 @@ namespace NLogForms1.Classes
         {
             _logger.LogInformation($"Doing work in {nameof(Execute)}");
 
-            EventId eventId = new EventId(1, "KP1");
+            EventId eventId = new(1, "Execute method");
 
             _logger.LogWarning(eventId, "Message");
 

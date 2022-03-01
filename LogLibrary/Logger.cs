@@ -16,6 +16,7 @@ namespace LogLibrary
             _textWriterTraceListener = new TextWriterTraceListener("applicationLog.txt", "PayneListener");
             Trace.Listeners.Add(_textWriterTraceListener);
         }
+
         /// <summary>
         /// Write trace information to disk
         /// </summary>
